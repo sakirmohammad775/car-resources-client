@@ -3,11 +3,12 @@ import Main from "../Layout/Main";
 import Home from "../Pages/Home/Home/Home";
 import Login from "../Login/Login";
 import SignUp from "../SignUp/SignUp";
-import CheckOut from "../Pages/CheckOut/CheckOut";
 import BookService from "../Pages/BookService/BookService";
 import Bookings from "../Pages/Bookings/Bookings";
 import PrivateRoute from "./PrivateRoute";
+import CheckOut from "../Pages/CheckOut/CheckOut";
 import About from "../Pages/Home/About/About";
+
 
 const router = createBrowserRouter([
   {
@@ -19,8 +20,12 @@ const router = createBrowserRouter([
         element: <Home></Home>
       },
       {
-        path: '/about',
-        children: <About></About>
+        path:'/about',
+        element:<About></About>
+      },
+      {
+        path: '/checkOut',
+        element: <CheckOut></CheckOut>
       },
       {
         path: '/login',
@@ -30,10 +35,7 @@ const router = createBrowserRouter([
         path: '/signUp',
         element: <SignUp></SignUp>
       },
-      {
-        path: '/checkOut',
-        children: <CheckOut></CheckOut>
-      },
+
       {
         path: '/bookService/:id',
         element: <PrivateRoute><BookService></BookService></PrivateRoute>,
@@ -42,7 +44,7 @@ const router = createBrowserRouter([
       {
         path: '/bookings',
         element: <PrivateRoute><Bookings></Bookings></PrivateRoute>
-       }
+      }
     ]
   },
 ]);
