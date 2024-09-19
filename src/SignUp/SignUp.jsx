@@ -58,7 +58,7 @@ const SignUp = () => {
 
                             <input className="btn  text-white bg-orange-600 " type="submit" value="Submit" />
                         </div>
-                        <p>Already have an Account? <Link className='text-orange-600' to='/login'>SignIn</Link></p>
+                       
                     </form>
                 </div>
             </div>
