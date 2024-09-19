@@ -48,7 +48,7 @@ const Navbar = () => {
                     <Link to='/bookings'><button >My Bookings</button></Link>
                     <button  onClick={handleLogOut} className="btn btn-ghost text-white bg-orange-600 px-10">Log Out</button>
                     </>:
-                    
+                    <Link to="/login"><button className="btn btn-ghost text-white bg-orange-600 px-10">Login</button></Link>
                 }
             </div>
         </div>
